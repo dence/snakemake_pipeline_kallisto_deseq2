@@ -1,3 +1,13 @@
 sample	condition
-A	untreated
-B	treated
+UF_Derv_001_ATCACG	2MJScrappings
+UF_Derv_002_TTAGGC	3MJScrappings	
+UF_Derv_003_TGACCA	5MJScrappings
+UF_Derv_004_ACAGTG	2MJCScrappings
+UF_Derv_005_GCCAAT	3MJCScrappings
+UF_Derv_006_CAGATC	5MJCScrappings
+UF_Derv_007_ACTTGA	2MJStem
+UF_Derv_008_CTTGTA	3MJStem
+UF_Derv_009_CCGTCC	5MJStem
+UF_Derv_010_GTCCGC	2MJCStem
+UF_Derv_011_AGTCAA	3MJCStem
+UF_Derv_012_AGTTCC	5MJCStem
