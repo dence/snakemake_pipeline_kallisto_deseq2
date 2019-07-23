@@ -23,11 +23,8 @@ properties:
     properties:
       index:
         type: string
-      annotation:
-        type: string
     required:
       - index
-      - annotation
 
   pca:
     type: object
