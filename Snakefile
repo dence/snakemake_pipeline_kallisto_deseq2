@@ -24,8 +24,8 @@ rule all:
         expand(["results/diffexp/{contrast}.diffexp.tsv",
                 "results/diffexp/{contrast}.ma-plot.svg"],
                contrast=config["diffexp"]["contrasts"]),
-        "results/pca.svg",
-        "qc/multiqc_report.html"
+        "results/pca.svg"
+        #"qc/multiqc_report.html"
 
 
 ##### setup singularity #####
@@ -44,6 +44,7 @@ report: "report/workflow.rst"
 
 include: "rules/common.smk"
 include: "rules/trim.smk"
-include: "rules/align.smk"
+include: "rules/quant.smk"
+#include: "rules/align.smk"
 include: "rules/diffexp.smk"
-include: "rules/qc.smk"
+#include: "rules/qc.smk"

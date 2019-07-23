@@ -61,8 +61,6 @@ properties:
 required:
   - samples
   - units
-  - trimming
   - ref
   - pca
   - diffexp
-  - params
