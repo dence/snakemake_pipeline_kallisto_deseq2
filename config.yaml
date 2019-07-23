@@ -1,7 +1,11 @@
-samples: "/home/d.ence/applications/snakemake_pipelines/pipelines_for_hipergator/ptaeda.induced_terpene_DE/old_induced_terpene_DE/samples.tsv"
+dir: ""
+samples: "/home/d.ence/applications/snakemake_pipeline_kallisto_deseq2//samples.tsv"
 
-units: "/home/d.ence/applications/snakemake_pipelines/pipelines_for_hipergator/ptaeda.induced_terpene_DE/old_induced_terpene_DE/units.tsv"
+units: "/home/d.ence/applications/snakemake_pipeline_kallisto_deseq2/units.tsv"
 
+trimming:
+        skip: true
+        adapter: ACGGATCGATCGATCGATCGAT
 ref:
         index: "/home/d.ence/d.ence_peter_share/pinus_taeda_L/miami_ohio_ESTs_ptaeda_rbh/t3352.cdna.v1.contig.kallisto"
 
@@ -14,3 +18,7 @@ diffexp:
                 day2-stem-vs-scrappings:
                         - 2MJScrappings
                         - 2MJStem
+params:
+        star: ""
+        cutadapt-se: ""
+        cutadapt-pe: ""
