@@ -1,8 +1,7 @@
 def get_fq(wildcards):
     if config["trimming"]["skip"]:
         # no trimming, use raw reads
-        print(units.loc[(wildcards.sample, wildcards.unit), "dir" + ["fq1","fq2"]].dropna())
-        return units.loc[(wildcards.sample, wildcards.unit), "dir" + ["fq1","fq2"]].dropna()
+        return units.loc[(wildcards.sample, wildcards.unit), ["fq1","fq2"]].dropna()
     else:
         # yes trimming, use trimmed data
         if not is_single_end(**wildcards):
@@ -27,4 +26,4 @@ rule quant:
         # optional parameters
         extra="--threads 1 "
     threads: 1
-    shell: "module load kallisto ; kallisto quant -i {params.index} -o {output} {input} &> {log}"
+    shell: "module load kallisto ; kallisto quant -i {params.index} -o {output.dir} {input} &>> {log}"
